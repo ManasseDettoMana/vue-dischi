@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="container">
+        <div class="my_container">
             <div class="row">
                 <!-- <img src="img/spoti-logo.png" alt=""> -->
             </div>
@@ -16,10 +16,13 @@ export default {
 
 <style scoped lang="scss">
 @import '../general/variables.scss';
-
-.row{
-    height: 75px;
+.my_container{
+    width: 100%;
+    margin: 0 auto;
     background-color:$primaryGrey;
+    .row{
+        height: 75px;
+    }
 }
 
 </style>
