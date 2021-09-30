@@ -16,16 +16,15 @@ export default {
 <style scoped lang="scss">
 @import '../general/variables.scss';
 
-img{
-    width: 80%;
-
-}
-
 h2{
     color:white;
+    margin-top: 14px;
+    font-weight: 500;
 }
 span{
     color: grey;
+    margin-top: 50px;
+
 }
 
 </style>

@@ -41,15 +41,22 @@ main{
     background-color: #2b2b3d;
     height: calc(100vh - 75px);
     .albums_container{
-        width: 90%;
+        width: 70%;
         margin: 0 auto;
         .row{
-            padding-top:100px ;
+            padding-top:60px ;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-between;
         }
         .album{
-            width: calc(100% / 5 - 90px);
+            width: calc(100% / 5 - 40px);
+            height: 400px;
             background-color: $primaryGrey;
-            margin: 0 20px 20px 20px;    
+            margin: 15px 12px 0 12px;    
+            padding: 30px;
+            
         }
     }
 }
