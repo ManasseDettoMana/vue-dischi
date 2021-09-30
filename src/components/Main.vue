@@ -1,10 +1,13 @@
 <template>
     <main>
         <div class="albums_container">
-            <div class="row">
+            <div class="row" v-if="loading">
                 <div v-for="(element, index) in albumList" :key="index" class="album">
                     <SingleAlbum :albumItem="element"/>
                 </div>
+            </div>
+            <div class="row" v-else>
+                <Loader />
             </div>
         </div>
     </main>
@@ -12,16 +15,19 @@
 
 <script>
 import axios from 'axios';
-import SingleAlbum from './SingleAlbum.vue'
+import SingleAlbum from './SingleAlbum.vue';
+import Loader from './Loader.vue';
 export default {
     name: 'Main',
     components: {
         SingleAlbum,
+        Loader,
     },
     data: function(){
         return{
             albumList: [],
             apiAddress: 'https://flynn.boolean.careers/exercises/api/array/music',
+            loading : false
         }
     },
     created: function(){
@@ -30,6 +36,10 @@ export default {
             this.albumList = response.data.response.slice();    //array copiato
             console.log(this.albumList);
         })
+
+        setTimeout(()=>{
+            this.loading = true;
+        }, 1500);
     }
 
 }
