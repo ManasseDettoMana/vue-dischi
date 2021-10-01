@@ -1,6 +1,5 @@
 <template>
     <div class="loader-wrapper">
-        <!-- <img src="http://www.mcleodgolf.com.au/wp-content/plugins/wp-restaurant-booking/images/loading.gif" alt=""> -->
         <i class="ex-10-icon fas fa-circle-notch"></i>
         <h1>Loading</h1>
     </div>
